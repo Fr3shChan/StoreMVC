@@ -2,11 +2,11 @@
 @{
 }
 
-<h2 class="text-center mb-5">List of Products</h2>
+<h2 class="text-center mb-5">Lista produktów</h2>
 
 <div class="row mb-5">
 	<div class="col">
-		<a class="btn btn-primary" asp-controller="Products" asp-action="Create">New Product</a>
+		<a class="btn btn-primary" asp-controller="Products" asp-action="Create">Nowy produkt</a>
 	</div>
 	<div class="col">
 
@@ -18,13 +18,13 @@
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th>Name</th>
-			<th>Brand</th>
-			<th>Category</th>
-			<th>Price</th>
-			<th>Image</th>
-			<th>Created At</th>
-			<th>Action</th>
+			<th>Nazwa</th>
+			<th>Marka</th>
+			<th>Kategoria</th>
+			<th>Cena</th>
+			<th>Obrazek</th>
+			<th>Utworzono</th>
+			<th>Opcje</th>
 		</tr>
 	</thead>
 
@@ -35,14 +35,14 @@
 				<td>@product.Name</td>
 				<td>@product.Brand</td>
 				<td>@product.Category</td>
-				<td>@(product.Price)$</td>
+				<td>@(product.Price)zł</td>
 				<td><img src="~/Products/@product.ImageFileName" width="100" /></td>
 				<td>@product.CreatedAt.ToString("MM/dd/yyyy")</td>
 				<td style="white-space:nowrap">
 					<a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit"
 						asp-route-id="@product.Id">Edit</a>
 					<a class="btn btn-danger btn-sm" asp-controller="Products" asp-action="Delete"
-					   asp-route-id="@product.Id" onclick="return confirm('Are you sure?')">Delete</a>
+					   asp-route-id="@product.Id" onclick="return confirm('Na pewno usunąć?')">Delete</a>
 				</td>
 			</tr>
 		}

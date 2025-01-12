@@ -122,7 +122,7 @@ namespace StoreMVC.Controllers
                 }
 
                 string oldImageFullPath = environment.WebRootPath + "/Products/" + product.ImageFileName;
-                System.IO.File.Delete(imageFullPath);
+                System.IO.File.Delete(oldImageFullPath);
             }
 
 
